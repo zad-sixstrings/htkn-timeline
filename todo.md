@@ -3,3 +3,6 @@ Faire que le logo de l'appli change toutes les 3 secondes, en piochant aléatoir
 
 ## Arrière-plan bannières ?
 L'arrière plan de l'appli en couleur sombre avec les bannières HTKN qui se stack, gap à environ 20px.
+
+## Recherche
+Ajouter fonction recherche d'évènements.

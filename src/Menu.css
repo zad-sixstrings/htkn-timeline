@@ -1,0 +1,24 @@
+.menu-wrapper {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.menu-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.158);
+  cursor: pointer;
+}

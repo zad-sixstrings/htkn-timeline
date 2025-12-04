@@ -1,0 +1,169 @@
+.timeline-wrapper,
+.timeline-event,
+.timeline-event-date,
+.timeline-event-title,
+.timeline-event-content {
+  box-sizing: border-box;
+}
+
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.timeline-wrapper::after {
+  /* Timeline bar */
+  content: "";
+  position: absolute;
+  width: 5px;
+  background: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 1%,
+    rgba(255, 255, 255, 0.3) 99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  top: 0;
+  bottom: 0;
+  right: 10%;
+}
+
+.timeline-event {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  color: white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.158);
+}
+
+.timeline-event-container {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.timeline-marker {
+  position: absolute;
+  right: calc(10% - 33px);
+  top: 20px;
+  z-index: 1;
+}
+
+.timeline-marker-logo {
+  width: 40px;
+}
+
+.right {
+  left: 0;
+}
+
+.right::before {
+  /* Timeline event arrow pointing right */
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 30px;
+  left: 259px;
+  border: medium solid rgba(255, 255, 255, 0.3);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.timeline-event-date {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.timeline-event-title {
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.timeline-event-content {
+  min-height: 50px;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.timeline-event-image {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.event-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.flag-icon {
+  display: inline-block;
+  width: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  padding-right: 1px;
+}
+
+.event-icon {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+/* Scrollbar styling */
+.timeline-event-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline-event-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.timeline-event-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.timeline-event-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
