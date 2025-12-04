@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import yaml from "js-yaml";
 import "./App.css";
+import Header from "./Header";
 
 // Parse date for sorting (fills in missing parts with defaults)
 function parseFlexibleDate(dateStr) {
@@ -86,22 +87,33 @@ function App() {
   if (events.length === 0) return <div>Aucun événement trouvé</div>;
 
   return (
-    <div className="timeline-wrapper">
-      <h1>HTKN Timeline</h1>
-      {events.map((event, i) => (
-        <div key={i} className="timeline-event">
-          <div className="timeline-event-date">
-            <p>{formatDate(event.date)}</p>
+    <>
+      <Header />
+      <div className="timeline-wrapper">
+        {events.map((event, i) => (
+          <div key={i} className="timeline-event-container">
+            <div className="timeline-event right">
+              <div className="timeline-event-date">
+                <p>{formatDate(event.date)}</p>
+              </div>
+              <div className="timeline-event-title">
+                <h3>{event.title}</h3>
+              </div>
+              <div className="timeline-event-content">
+                <p>{event.description}</p>
+              </div>
+            </div>
+            <div className="timeline-marker">
+              <img
+                src="./src/assets/logos/timeline-marker.png"
+                alt="Marqueur de timeline"
+                className="timeline-marker-logo"
+              />
+            </div>
           </div>
-          <div className="timeline-event-title">
-            <h3>{event.title}</h3>
-          </div>
-          <div className="timeline-event-content">
-            <p>{event.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 
