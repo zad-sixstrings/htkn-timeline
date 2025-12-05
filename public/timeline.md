@@ -254,4 +254,8 @@ events:
     title: "Nouvelle Recrue"
     description: "{flag-fr}jefbend3r rejoint la HTKN."
     category: "team"
+  - date: "2018-01-16"
+    title: "Genkidama!"
+    description: "{flag-fr}ultra13570 se hisse à la 206ème place du classement mondial sur Dragon Ball FighterZ."
+    category: "achievement"
 ---
