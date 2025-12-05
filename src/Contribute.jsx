@@ -16,9 +16,36 @@ export default function Contribute({ isOpen, onClose }) {
         </p>
         <p>Voici plusieurs moyens de contact à choix:</p>
         <ul>
-            <li><a href="https://www.facebook.com/HTKNPageOfficielle" target="_blank" className="contribute-link">Page Facebook</a></li>
-            <li><a href="https://discord.gg/jTWcmQM" target="_blank" className="contribute-link">Serveur Discord</a></li>
-            <li><a href="mailto:contact@juliendebaz.ch?subject=Chronologie HTKN" target="_blank" className="contribute-link">Envoyer un email au développeur</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/HTKNPageOfficielle"
+              target="_blank"
+              className="contribute-link"
+            >
+              Page Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.gg/jTWcmQM"
+              target="_blank"
+              className="contribute-link"
+            >
+              Serveur Discord
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "mailto:" + "contact" + "@" + "juliendebaz.ch";
+              }}
+            >
+              Contacter le développeur
+            </a>
+          </li>
         </ul>
         <p>Merci d'avance pour votre contribution!</p>
       </div>
