@@ -11,7 +11,7 @@ function parseFlags(text) {
   });
 }
 
-// Parse date for sorting (fills in missing parts with defaults)
+// Parse date for sorting
 function parseFlexibleDate(dateStr) {
   if (/^\d{4}$/.test(dateStr)) {
     // Just year: treat as January 1st for sorting
@@ -28,7 +28,7 @@ function parseFlexibleDate(dateStr) {
 // Display date based on original precision
 function formatDate(dateStr) {
   if (/^\d{4}$/.test(dateStr)) {
-    return dateStr; // "2008"
+    return dateStr;
   } else if (/^\d{4}-\d{2}$/.test(dateStr)) {
     return new Date(dateStr).toLocaleDateString("fr-FR", {
       year: "numeric",
@@ -55,8 +55,8 @@ function parseFrontmatter(text) {
 
 export default function Timeline() {
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // Corresponding code currently commented.
+  const [error, setError] = useState(null); // Corresponding code currently commented.
   const [displayedEvents, setDisplayedEvents] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4);
   const [previousCount, setPreviousCount] = useState(0);

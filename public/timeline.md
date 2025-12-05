@@ -251,5 +251,3 @@ events:
     description: "{flag-fr}jefbend3r rejoint la HTKN."
     category: "team"
 ---
-
-# HTKN Timeline

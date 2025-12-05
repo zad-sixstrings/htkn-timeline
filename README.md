@@ -1,16 +1,18 @@
-# React + Vite
+# HTKN - La Chronologie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En hommage à notre cher ami Morpho, co-fondateur et pilier fondamental de la team gaming HTKN.
 
-Currently, two official plugins are available:
+## Plus de 16 ans d'histoire
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Avec ce projet, j'ai tenté de retracer au mieux l'histoire et les principaux évènements de la team. 
 
-## React Compiler
+## To-do
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[-] Logo diaporama
+Faire que le logo de l'appli change toutes les 3 secondes, en piochant aléatoirement dans la liste des logos. Une animation se déclenche à chaque changement en guise de transition. Par exemple, une animation de flip, de glitch ou de slide.
 
-## Expanding the ESLint configuration
+[-] Arrière-plan bannières ?
+L'arrière plan de l'appli en couleur sombre avec les bannières HTKN qui se stack, gap à environ 20px.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[-] Recherche
+Ajouter fonction recherche d'évènements.

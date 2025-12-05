@@ -149,21 +149,3 @@
   opacity: 0.5;
   z-index: 10;
 }
-
-/* Scrollbar styling */
-.timeline-event-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.timeline-event-content::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.timeline-event-content::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-.timeline-event-content::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}

@@ -1,4 +1,5 @@
 import "./Header.css";
+import htknlogo from "./assets/logos/HTKN.png";
 
 export default function Header() {
   return (
@@ -6,7 +7,7 @@ export default function Header() {
       <div className="header-wrapper">
         <div className="header-logo">
           <img
-            src="./src/assets/logos/HTKN.png"
+            src={htknlogo}
             alt="Logo HTKN"
             className="logo"
           />
