@@ -15,39 +15,35 @@ export default function Contribute({ isOpen, onClose }) {
           une information erronnée et aimeriez proposer une correction?
         </p>
         <p>Voici plusieurs moyens de contact à choix:</p>
-        <ul>
-          <li>
-            <a
-              href="https://www.facebook.com/HTKNPageOfficielle"
-              target="_blank"
-              className="contribute-link"
-            >
-              Page Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://discord.gg/jTWcmQM"
-              target="_blank"
-              className="contribute-link"
-            >
-              Serveur Discord
-            </a>
-          </li>
-          <li>
-            <a
-              href="#" 
-              className="contribute-link"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href =
-                  "mailto:" + "contact" + "@" + "juliendebaz.ch";
-              }}
-            >
-              Contacter le développeur
-            </a>
-          </li>
-        </ul>
+        <div className="contact">
+          <a
+            href="https://www.facebook.com/HTKNPageOfficielle"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contribute-link facebook"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://discord.gg/jTWcmQM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contribute-link discord"
+          >
+            Discord
+          </a>
+          <a
+            href="#"
+            className="contribute-link email"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href =
+                "mailto:" + "contact" + "@" + "juliendebaz.ch";
+            }}
+          >
+            Email
+          </a>
+        </div>
         <p>Merci d'avance pour votre contribution!</p>
       </div>
     </div>
