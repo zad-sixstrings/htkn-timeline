@@ -42,7 +42,7 @@ events:
     category: "gaming"
   - date: "2013-11"
     title: "Los Santos parano"
-    description: "La HTKN compte des dizaines de membres dans son crew GTA Online. Les courses s'enchainent, les affrontements font rage."
+    description: "La HTKN compte des dizaines de membres dans son crew GTA Online. Les courses s'enchainent, les affrontements font rage. {flag-fr}Morpho28 crée la nouvelle version du logo de la team, qui reste encore le logo utilisé aujourd'hui."
     category: "gaming"
   - date: "2013-11-13"
     title: "Viser le sommet"

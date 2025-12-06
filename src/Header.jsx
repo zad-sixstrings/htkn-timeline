@@ -1,14 +1,17 @@
 import "./Header.css";
+import { useRotatingLogo } from "./utils/useRotatingLogo";
 
 export default function Header() {
+  const { currentLogo, isGlitching } = useRotatingLogo(5000);
+
   return (
     <header>
       <div className="header-wrapper">
         <div className="header-logo">
           <img
-            src="/logos/HTKN.png"
+            src={currentLogo}
             alt="Logo HTKN"
-            className="logo"
+            className={`logo ${isGlitching ? "glitching" : ""}`}
           />
         </div>
         <div className="header-title">
