@@ -1,5 +1,4 @@
 import { EVENT_ICONS } from "./utils/constants";
-import timelineMarker from "./assets/logos/timeline-marker.png";
 
 // Parse flags in description text
 function parseFlags(text) {
@@ -65,7 +64,7 @@ export default function TimelineEvent({ event, isNew }) {
       </div>
       <div className="timeline-marker">
         <img
-          src={timelineMarker}
+          src="/logos/timeline-marker.png"
           alt="Marqueur de timeline"
           className="timeline-marker-logo"
         />
