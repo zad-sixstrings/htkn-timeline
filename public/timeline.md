@@ -56,7 +56,7 @@ events:
   - date: "2014-02"
     title: "Nouvelle recrue"
     description: "{flag-fr}frankymarcel rejoint la HTKN."
-    category: "gaming"
+    category: "team"
   - date: "2015"
     title: "Nouvelle recrue"
     description: "{flag-fr}Mr_Cakeii rejoint la HTKN."

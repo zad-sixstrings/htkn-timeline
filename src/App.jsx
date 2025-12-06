@@ -1,18 +1,23 @@
+import { useState, useCallback } from "react";
 import "./App.css";
 import Header from "./Header";
 import Menu from "./Menu";
-import Timeline from "./Timeline";
 import Search from "./Search";
-import { useState } from "react";
+import Timeline from "./Timeline";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [resultsCount, setResultsCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
 
-  const handleSearchChange = (query) => {
+  const handleSearchChange = useCallback((query) => {
     setSearchQuery(query);
-  };
+  }, []);
+
+  const handleCountsUpdate = useCallback((filtered, total) => {
+    setResultsCount(filtered);
+    setTotalCount(total);
+  }, []);
 
   return (
     <div className="main-wrapper">
@@ -25,10 +30,7 @@ function App() {
       />
       <Timeline
         searchQuery={searchQuery}
-        onCountsUpdate={(filtered, total) => {
-          setResultsCount(filtered);
-          setTotalCount(total);
-        }}
+        onCountsUpdate={handleCountsUpdate}
       />
     </div>
   );

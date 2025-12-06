@@ -20,7 +20,8 @@ export default function Search({ onSearchChange, resultsCount, totalCount }) {
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [searchValue, onSearchChange]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchValue]);
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import yaml from "js-yaml";
 import { INITIAL_VISIBLE_COUNT, LOAD_INCREMENT, SCROLL_THRESHOLD } from "./constants";
 
@@ -98,8 +98,10 @@ export function useTimelineData(searchQuery = "") {
       });
   }, []);
 
-  // Filter events based on search query
-  const filteredEvents = filterEvents(events, searchQuery);
+  // Filter events based on search query (memoized to prevent infinite loops)
+  const filteredEvents = useMemo(() => {
+    return filterEvents(events, searchQuery);
+  }, [events, searchQuery]);
 
   // Reset visible count when search changes
   useEffect(() => {

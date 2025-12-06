@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./Timeline.css";
 import TimelineEvent from "./TimelineEvent";
 import { useTimelineData } from "./utils/useTimelineData";
@@ -14,12 +14,26 @@ export default function Timeline({ searchQuery, onCountsUpdate }) {
     previousCount,
   } = useTimelineData(searchQuery);
 
-  // Update counts when they change
+  // Track previous counts to avoid unnecessary updates
+  const prevCountsRef = useRef({ filtered: 0, total: 0 });
+
+  // Update counts only when they actually change
   useEffect(() => {
     if (onCountsUpdate && !loading) {
-      onCountsUpdate(filteredEvents.length, events.length);
+      const filteredLength = filteredEvents.length;
+      const totalLength = events.length;
+      
+      // Only call if counts have actually changed
+      if (
+        prevCountsRef.current.filtered !== filteredLength ||
+        prevCountsRef.current.total !== totalLength
+      ) {
+        prevCountsRef.current = { filtered: filteredLength, total: totalLength };
+        onCountsUpdate(filteredLength, totalLength);
+      }
     }
-  }, [filteredEvents.length, events.length, loading, onCountsUpdate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filteredEvents.length, events.length, loading]);
 
   // Show loading state
   if (loading) {
