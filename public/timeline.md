@@ -217,6 +217,7 @@ events:
     title: "Dans nos coeurs, pour l'éternité"
     description: "{flag-fr}Morpho28, co-fondateur et pilier fondamental de la HTKN, rejoint les cieux."
     category: "team"
+    image: "morpho-profil.jpg"
   - date: "2025-09-16"
     title: "Do a kickflip!"
     description: "{flag-ch}ToxxicZad et {flag-fr}Morpho28 enfilent leurs Etnies et partent se râper les coudes sur Skate, ravivant leurs souvenirs des centaines d'heures de ride sur Skate 3 plus de 10 ans auparavant."
@@ -258,4 +259,8 @@ events:
     title: "Genkidama!"
     description: "{flag-fr}ultra13570 se hisse à la 206ème place du classement mondial sur Dragon Ball FighterZ."
     category: "achievement"
+  - date: "2018-09"
+    title: "Nouvelle recrue"
+    description: "{flag-fr}Vicouk_ rejoint les rangs à l'occasion de la sortie de la saison 'Forsaken' de Destiny 2."
+    category: "team"
 ---
