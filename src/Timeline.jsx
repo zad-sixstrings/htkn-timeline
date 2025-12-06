@@ -1,16 +1,25 @@
+import { useEffect } from "react";
 import "./Timeline.css";
 import TimelineEvent from "./TimelineEvent";
-import { useTimelineData } from "./utils/useTimeLineData";
+import { useTimelineData } from "./utils/useTimelineData";
 
-export default function Timeline() {
+export default function Timeline({ searchQuery, onCountsUpdate }) {
   const {
     events,
+    filteredEvents,
     displayedEvents,
     loading,
     error,
     visibleCount,
     previousCount,
-  } = useTimelineData();
+  } = useTimelineData(searchQuery);
+
+  // Update counts when they change
+  useEffect(() => {
+    if (onCountsUpdate && !loading) {
+      onCountsUpdate(filteredEvents.length, events.length);
+    }
+  }, [filteredEvents.length, events.length, loading, onCountsUpdate]);
 
   // Show loading state
   if (loading) {
@@ -39,6 +48,17 @@ export default function Timeline() {
     );
   }
 
+  // Show no search results
+  if (searchQuery && filteredEvents.length === 0) {
+    return (
+      <div className="timeline-wrapper">
+        <div className="timeline-status">
+          Aucun événement ne correspond à "{searchQuery}"
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="timeline-wrapper">
       {displayedEvents.map((event, i) => {
@@ -54,7 +74,7 @@ export default function Timeline() {
         );
       })}
 
-      {visibleCount < events.length && (
+      {visibleCount < filteredEvents.length && (
         <div className="timeline-loading-more">
           Chargement...
         </div>

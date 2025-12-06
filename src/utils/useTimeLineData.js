@@ -26,7 +26,40 @@ function parseFrontmatter(text) {
   return null;
 }
 
-export function useTimelineData() {
+// Filter events based on search query
+function filterEvents(events, searchQuery) {
+  if (!searchQuery || searchQuery.trim() === "") {
+    return events;
+  }
+
+  const query = searchQuery.toLowerCase().trim();
+
+  return events.filter((event) => {
+    // Search in title
+    if (event.title && event.title.toLowerCase().includes(query)) {
+      return true;
+    }
+
+    // Search in description
+    if (event.description && event.description.toLowerCase().includes(query)) {
+      return true;
+    }
+
+    // Search in date (formatted)
+    if (event.date && event.date.toLowerCase().includes(query)) {
+      return true;
+    }
+
+    // Search in category
+    if (event.category && event.category.toLowerCase().includes(query)) {
+      return true;
+    }
+
+    return false;
+  });
+}
+
+export function useTimelineData(searchQuery = "") {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -65,11 +98,19 @@ export function useTimelineData() {
       });
   }, []);
 
+  // Filter events based on search query
+  const filteredEvents = filterEvents(events, searchQuery);
+
+  // Reset visible count when search changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  }, [searchQuery]);
+
   // Update displayed events
   useEffect(() => {
-    setDisplayedEvents(events.slice(0, visibleCount));
+    setDisplayedEvents(filteredEvents.slice(0, visibleCount));
     setPreviousCount(visibleCount);
-  }, [events, visibleCount]);
+  }, [filteredEvents, visibleCount]);
 
   // Scroll listener to load more events
   useEffect(() => {
@@ -77,17 +118,18 @@ export function useTimelineData() {
       const scrolledToBottom =
         window.innerHeight + window.scrollY >= document.body.offsetHeight - SCROLL_THRESHOLD;
 
-      if (scrolledToBottom && visibleCount < events.length) {
-        setVisibleCount((prev) => Math.min(prev + LOAD_INCREMENT, events.length));
+      if (scrolledToBottom && visibleCount < filteredEvents.length) {
+        setVisibleCount((prev) => Math.min(prev + LOAD_INCREMENT, filteredEvents.length));
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [visibleCount, events.length]);
+  }, [visibleCount, filteredEvents.length]);
 
   return {
     events,
+    filteredEvents,
     displayedEvents,
     loading,
     error,

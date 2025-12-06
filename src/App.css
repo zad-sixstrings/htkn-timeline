@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #00426e;
+  background-color: rgb(0, 19, 33);
   background: linear-gradient(
     180deg,
     rgb(0, 56, 94) 0%,
@@ -11,6 +11,7 @@ body {
   );
   color: white;
   font-family: monospace;
+  height: 100%;
 }
 
 header {
