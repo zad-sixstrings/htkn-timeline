@@ -9,30 +9,26 @@ export function useRotatingLogo(intervalMs = 5000) {
 
   // Fetch logo list from manifest.json on mount
   useEffect(() => {
-    fetch('/logos/manifest.json')
-      .then(res => {
+    fetch("/logos/manifest.json")
+      .then((res) => {
         if (!res.ok) {
           throw new Error(`Failed to fetch manifest: ${res.status}`);
         }
         return res.json();
       })
-      .then(data => {
+      .then((data) => {
         if (data.logos && data.logos.length > 0) {
           const sortedLogos = [...data.logos].sort();
           setLogoFiles(sortedLogos);
           setCurrentLogo(sortedLogos[0]);
-          console.log('🎮 Loaded logos from manifest:', sortedLogos);
-          if (data.lastUpdated) {
-            console.log('📅 Manifest last updated:', data.lastUpdated);
-          }
         } else {
-          console.warn('⚠️ No logos found in manifest');
+          console.warn("⚠️ No logos found in manifest");
         }
         setIsLoading(false);
       })
-      .catch(err => {
-        console.error('❌ Error loading logo manifest:', err);
-        console.log('📦 Using fallback logo');
+      .catch((err) => {
+        console.error("❌ Error loading logo manifest:", err);
+        console.log("📦 Using fallback logo");
         setIsLoading(false);
       });
   }, []);
@@ -40,9 +36,9 @@ export function useRotatingLogo(intervalMs = 5000) {
   // Get a random logo that's different from the current one
   const getRandomLogo = useCallback(() => {
     if (logoFiles.length === 1) return logoFiles[0];
-    
+
     // Filter out the current logo to ensure we always get a different one
-    const availableLogos = logoFiles.filter(logo => logo !== currentLogo);
+    const availableLogos = logoFiles.filter((logo) => logo !== currentLogo);
     const randomIndex = Math.floor(Math.random() * availableLogos.length);
     return availableLogos[randomIndex];
   }, [currentLogo, logoFiles]);
@@ -55,7 +51,7 @@ export function useRotatingLogo(intervalMs = 5000) {
     // Change logo during glitch (midway through animation)
     setTimeout(() => {
       const newLogo = getRandomLogo();
-      setPreviousLogos(prev => [...prev, currentLogo].slice(-3)); // Keep last 3
+      setPreviousLogos((prev) => [...prev, currentLogo].slice(-3)); // Keep last 3
       setCurrentLogo(newLogo);
     }, 150); // Change halfway through 300ms glitch
 
