@@ -36,7 +36,8 @@ export default function Contribute({ isOpen, onClose }) {
           </li>
           <li>
             <a
-              href="#"
+              href="#" 
+              className="contribute-link"
               onClick={(e) => {
                 e.preventDefault();
                 window.location.href =
