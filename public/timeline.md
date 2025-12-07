@@ -2,7 +2,7 @@
 events:
   - date: "2009"
     title: "Hello, world!"
-    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2."
+    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2. Ils seront ensuite rejoints par leurs amis d'enfance {flag-fr}JULIO-28, {flag-fr}ACY28 et {flag-fr}brucely28."
     category: "team"
   - date: "2009"
     title: "Nouvelles recrues"

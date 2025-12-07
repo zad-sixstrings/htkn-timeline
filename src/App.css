@@ -12,6 +12,7 @@ body {
   color: white;
   font-family: monospace;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 header {
@@ -21,6 +22,7 @@ header {
 .menu-wrapper {
   animation: loadIn linear 0.3s backwards;
   animation-delay: 0.3s;
+  overflow-x: hidden;
 }
 
 .timeline-wrapper {

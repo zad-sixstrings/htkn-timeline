@@ -11,6 +11,7 @@
   width: 100%;
   padding: 20px;
   isolation: isolate; /* Isolation to avoid glitches */
+  z-index: 0;
 }
 
 .timeline-wrapper::after {
@@ -52,6 +53,23 @@
   position: relative;
   margin-bottom: 80px;
   z-index: 1; /* Keep above timeline-wrapper to avoid glitches */
+  max-width: 100%;
+}
+
+/* Timeline event arrow pointing right */
+.timeline-event-container::after {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 30px;
+  left: 260px;
+  border: medium solid rgba(255, 255, 255, 0.3);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  max-width: 100vw;
+  pointer-events: none;
 }
 
 .timeline-marker {
@@ -70,7 +88,7 @@
 }
 
 .right::before {
-  /* Timeline event arrow pointing right */
+  /* Timeline event arrow pointing right - BACK TO ORIGINAL */
   content: " ";
   height: 0;
   width: 0;

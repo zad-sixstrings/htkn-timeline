@@ -13,13 +13,30 @@
 .menu-button {
   width: 120px;
   height: 40px;
-  border-radius: 20px;
   color: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.158);
   cursor: pointer;
+}
+
+.info {
+  background-image: url("/icons/info.png");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 20px;
+  background-position-y: 8px;
+  background-position-x: 5px;
+}
+
+.contribute {
+  background-image: url("/icons/contribute.png");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 20px;
+  background-position-y: 8px;
+  background-position-x: 5px;
 }

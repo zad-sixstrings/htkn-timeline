@@ -11,14 +11,14 @@ export default function Menu() {
     <>
       <div className="menu-wrapper">
         <div className="menu-about">
-          <button onClick={() => setShowInfo(true)} className="menu-button">
-            Kezako?
+          <button onClick={() => setShowInfo(true)} className="menu-button info">
+            Kézako
           </button>
         </div>
         <div className="menu-contribute">
           <button
             onClick={() => setShowContribute(true)}
-            className="menu-button"
+            className="menu-button contribute"
           >
             Contribuer
           </button>

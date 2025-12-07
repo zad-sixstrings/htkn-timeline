@@ -19,7 +19,7 @@ export default function Header() {
             <h1>Team HTKN</h1>
           </div>
           <div className="header-sub-title">
-            <h2>La Chronologie</h2>
+            <h2>Plus de 16 ans d'histoire</h2>
           </div>
         </div>
       </div>
