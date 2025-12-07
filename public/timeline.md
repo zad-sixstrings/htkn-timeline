@@ -6,7 +6,7 @@ events:
     category: "team"
   - date: "2009"
     title: "Nouvelles recrues"
-    description: "{flag-fr}ultra13570, {flag-fr}cloclo59170, {flag-fr}Buzzfuzz, {flag-fr}beethove65, {flag-fr}storm-blast, {flag-fr}xxDAVID974xx et {flag-fr}Mwertoo rejoignent la HTKN."
+    description: "{flag-fr}ultra13570, {flag-fr}cloclo59170, {flag-fr}Buzzfuzz, {flag-fr}beethove65, {flag-fr}xxDAVID974xx et {flag-fr}Mwertoo rejoignent la HTKN."
     category: "team"
   - date: "2010"
     title: "Nouvelles recrues"
@@ -275,4 +275,8 @@ events:
     title: "To be continued..."
     description: "Qui peut savoir ce que l'avenir réserve à la team? Les années ont passé: certains se sont mariés, ont eu des enfants, changé de vie ou d'horizons.<br><br>Pourtant, le lien demeure. Quelques-uns arpentent encore les serveurs, d'autres se retrouvent autour d'un verre. Un téléphone sonne quelque part dans la francophonie - un membre de la HTKN à l'autre bout. Avec ou sans manette, c'est toujours nous.<br><br>Une chose est sûre: l'écho de ces années passées ensemble résonnera toujours, où que nous allions, quoi que nous fassions.<br><br>Certaines rencontres changent une vie. Merci d'avoir changé la nôtre."
     category: "team"
+  - date: "2019-02-06"
+    title: "Jebquiem"
+    description: "{flag-fr}Vegalaeti co-écrit et interprête au piano [un des morceaux](https://soundcloud.com/pickbyte/jebquiem-performed-by-laetitia-castera-music-for-jolly-roger-aerospace) de la bande originale composée par {flag-ch}ToxxicZad pour la série YouTube 'Jebquiem', produite par le youtubeur américain [Jolly Roger Aerospace](https://www.youtube.com/@JollyRogerAerospace)."
+    category: "achievement"
 ---
