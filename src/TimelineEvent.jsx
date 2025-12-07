@@ -1,11 +1,18 @@
 import { EVENT_ICONS } from "./utils/constants";
 import timelineMarker from "./assets/timeline-marker.png";
  
-// Parse flags in description text
+// Parse flags
 function parseFlags(text) {
   return text.replace(/\{flag-([\w]{2})\}(\S+)/g, (match, code, name) => {
     const countryCode = code.toLowerCase();
     return `<span style="white-space: nowrap;"><img src="/flags/${countryCode}.svg" alt="${countryCode}" class="flag-icon" />${name}</span>`;
+  });
+}
+
+// Parse Markdown links
+function parseLinks(text) {
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
   });
 }
 
@@ -49,7 +56,7 @@ export default function TimelineEvent({ event, isNew }) {
         <div className="timeline-event-content">
           <p
             dangerouslySetInnerHTML={{
-              __html: parseFlags(event.description),
+              __html: parseLinks(parseFlags(event.description)),
             }}
           ></p>
         </div>
