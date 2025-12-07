@@ -6,7 +6,7 @@ events:
     category: "team"
   - date: "2009"
     title: "Nouvelles recrues"
-    description: "{flag-fr}ultra13570, {flag-fr}cloclo59170, {flag-fr}Buzzfuzz, {flag-fr}beethove65, {flag-fr}xxDAVID974xx et {flag-fr}Mwertoo rejoignent la HTKN."
+    description: "{flag-fr}ultra13570, {flag-fr}cloclo59170, {flag-fr}Buzzfuzz, {flag-fr}beethove65, {flag-fr}xxDAVID974xx, {flag-fr}furkan66 et {flag-fr}Mwertoo rejoignent la HTKN."
     category: "team"
   - date: "2010"
     title: "Nouvelles recrues"
