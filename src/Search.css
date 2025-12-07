@@ -7,6 +7,7 @@
   margin-bottom: 30px;
   animation: loadIn linear 0.3s backwards;
   animation-delay: 0.45s;
+
 }
 
 /* Collapsed magnifier button */
@@ -63,12 +64,12 @@
   width: 80%;
   height: 50px;
   border-radius: 25px;
-  color: white;
+  color: white; 
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.158);
+  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.158); 
   display: flex;
   align-items: center;
 }
@@ -105,9 +106,9 @@
   padding-right: 50px;
   width: 24px;
   height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  position: absolute;
+  right: 40px;
   transition: opacity 0.2s;
 }
 
