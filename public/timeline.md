@@ -144,7 +144,7 @@ events:
     category: "gaming"
   - date: "2017-01"
     title: "C'est vraiment un gros tas de..."
-    description: "La HTKN début sa longue aventure sur ARK. Les palissades du premier village sont dressées. À cette occasion, {flag-ch}datu_ra1990 rejoint la team."
+    description: "La HTKN débute sa longue aventure sur ARK. Les palissades du premier village sont dressées. À cette occasion, {flag-ch}datu_ra1990 rejoint la team."
     category: "gaming"
   - date: "2017-02-26"
     title: "Home sweet home"
