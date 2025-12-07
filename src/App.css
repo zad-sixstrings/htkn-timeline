@@ -15,17 +15,17 @@ body {
 }
 
 header {
-    animation: loadIn linear 0.3s backwards;
+  animation: loadIn linear 0.3s backwards;
 }
 
 .menu-wrapper {
-    animation: loadIn linear 0.3s backwards;
-    animation-delay: 0.3s;
+  animation: loadIn linear 0.3s backwards;
+  animation-delay: 0.3s;
 }
 
 .timeline-wrapper {
-    animation: loadIn linear 0.3s backwards;
-    animation-delay: 0.6s;
+  animation: loadIn linear 0.3s backwards;
+  animation-delay: 0.6s;
 }
 
 .timeline-event-container.fade-in {
@@ -34,14 +34,14 @@ header {
 
 /* Animations */
 @keyframes loadIn {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInUp {
@@ -56,10 +56,44 @@ header {
   }
 }
 
+/* Force hardware acceleration for glassmorphism elements */
+.menu-button,
+.search-icon-button,
+.search-bar,
+.timeline-event,
+.modal-content,
+a.contribute-link {
+  contain: layout style paint;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.timeline-event-container.fade-in .timeline-event,
+header .menu-button,
+.menu-wrapper .menu-button,
+.search-wrapper .search-icon-button,
+.search-wrapper .search-bar {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Prevent glitches during animations */
+@media (prefers-reduced-motion: no-preference) {
+  .timeline-event-container.fade-in {
+    /* Isolate during animation */
+    isolation: isolate;
+  }
+}
+
+/* Force repaint after animations complete */
+.timeline-event-container:not(.fade-in) {
+  transform: translate3d(0, 0, 0);
+}
+
 /* Responsive */
 @media (min-width: 450px) {
-    .main-wrapper {
-        width: 420px;
-        margin: auto;
-    }
+  .main-wrapper {
+    width: 420px;
+    margin: auto;
+  }
 }

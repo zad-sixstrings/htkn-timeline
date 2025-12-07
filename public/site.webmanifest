@@ -1,6 +1,8 @@
 {
   "name": "HTKN - La Chronologie",
   "short_name": "HTKN",
+  "description": "Chronologie de la HTKN depuis 2009",
+  "start_url": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +15,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#00385e",
+  "background_color": "#001321",
   "display": "standalone"
 }

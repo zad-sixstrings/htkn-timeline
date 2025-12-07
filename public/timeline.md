@@ -10,7 +10,7 @@ events:
     category: "team"
   - date: "2010"
     title: "Nouvelles recrues"
-    description: "{flag-fr}sebihno et {flag-fr}momosnr84 rejoignent la HTKN."
+    description: "{flag-fr}storm-blast, {flag-fr}sebihno et {flag-fr}momosnr84 rejoignent la HTKN."
     category: "team"
   - date: "2012"
     title: "Nouvelles recrues"

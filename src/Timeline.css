@@ -10,6 +10,7 @@
   position: relative;
   width: 100%;
   padding: 20px;
+  isolation: isolate; /* Isolation to avoid glitches */
 }
 
 .timeline-wrapper::after {
@@ -28,6 +29,7 @@
   top: 0;
   bottom: 0;
   right: 10%;
+  z-index: 0; /* Keep behind to avoid glitches */
 }
 
 .timeline-event {
@@ -49,6 +51,7 @@
 .timeline-event-container {
   position: relative;
   margin-bottom: 80px;
+  z-index: 1; /* Keep above timeline-wrapper to avoid glitches */
 }
 
 .timeline-marker {
