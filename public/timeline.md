@@ -2,7 +2,7 @@
 events:
   - date: "2009"
     title: "Hello, world!"
-    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2. Ils seront ensuite rejoints par leurs amis d'enfance{?:Ils se sont connus au collège. blablablablabla blab blab blbalalalala} {flag-fr}JULIO-28, {flag-fr}ACY28 et {flag-fr}brucely28."
+    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2. Ils seront ensuite rejoints par leurs amis d'enfance {flag-fr}JULIO-28, {flag-fr}ACY28 et {flag-fr}brucely28."
     category: "team"
   - date: "2009"
     title: "Nouvelles recrues"
@@ -63,7 +63,7 @@ events:
     category: "team"
   - date: "2014-03-24"
     title: "Terre en vue!"
-    description: "La team s'étend à l'écosystème PC. Le [groupe Steam](https://steamcommunity.com/groups/htkn) est créé et deviendra Steam-curator."
+    description: "La team s'étend à l'écosystème PC. Le [groupe Steam](https://steamcommunity.com/groups/htkn) est créé et deviendra Steam-curator{?:Les groupes curators publient des recommandations de jeux mises en avant par Steam.}."
     category: "team"
   - date: "2013-12"
     title: "Nouvelle recrue"
