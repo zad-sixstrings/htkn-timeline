@@ -293,6 +293,6 @@ events:
     category: "team"
   - date: "2021-03"
     title: "À vous les studios"
-    description: "{flag-ch}ToxxicZad obtient le statut de Twitch Affiliaite sur sa chaîne. Des membres de la HTKN participeront à ses lives, notamment {flag-fr}Morpho28. Il mettra fin à son activité sur Twitch lors d'un dernier stream le 12 juillet 2023 après un total de 935 heures diffusées."
+    description: "{flag-ch}ToxxicZad obtient le statut de Twitch Affiliate{?:Le statut 'affiliate' ou 'affilié' permet à un streamer de générer des revenus à travers sa chaîne en signant un contrat d'affiliation avec Twitch.} sur sa chaîne. Des membres de la HTKN participeront à ses lives, notamment {flag-fr}Morpho28. Il mettra fin à son activité sur Twitch lors d'un dernier stream le 12 juillet 2023 après un total de 935 heures diffusées."
     category: "achievement"
 ---
