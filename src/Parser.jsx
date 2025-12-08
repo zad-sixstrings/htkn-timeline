@@ -8,7 +8,7 @@ function parseFlags(text) {
   });
 }
 
-// Parse inline tooltips - convert {?:tooltip text} to clickable spans
+// Parse inline tooltips
 function parseInlineTooltips(text) {
   const parts = [];
   let lastIndex = 0;
@@ -68,11 +68,11 @@ function TooltipTrigger({ id, active, onClick }) {
   );
 }
 
-// Main parser component - handles tooltips, flags, and markdown links
+// Handle tooltips, flags, and markdown links
 export default function Parser({ text }) {
   const [activeTooltip, setActiveTooltip] = useState(null);
 
-  // Parse the text for tooltips first, then apply other parsing to text parts
+  // Parse the text for tooltips first, then apply other parsings
   const parts = parseInlineTooltips(text);
   
   // Get the content of the active tooltip
@@ -90,7 +90,6 @@ export default function Parser({ text }) {
 
   return (
     <>
-      {/* Fixed position tooltip bubble - rendered once at container level */}
       {activeTooltipContent && (
         <div className="inline-tooltip-bubble">
           {activeTooltipContent}
