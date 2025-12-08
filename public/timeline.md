@@ -2,7 +2,7 @@
 events:
   - date: "2009"
     title: "Hello, world!"
-    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2. Ils seront ensuite rejoints par leurs amis d'enfance {flag-fr}JULIO-28, {flag-fr}ACY28 et {flag-fr}brucely28."
+    description: "{flag-fr}Morpho28 et {flag-fr}Lugro28 fondent la HTKN sur Killzone 2. Ils seront ensuite rejoints par leurs amis d'enfance{?:Ils se sont connus au collège. blablablablabla blab blab blbalalalala} {flag-fr}JULIO-28, {flag-fr}ACY28 et {flag-fr}brucely28."
     category: "team"
   - date: "2009"
     title: "Nouvelles recrues"
@@ -135,7 +135,7 @@ events:
     category: "gaming"
   - date: "2016-05-02"
     title: "Zinedine Schumacher"
-    description: "La HTKN choisit {flag-fr}Morpho28, {flag-fr}cloclo59120 et {flag-ch}ToxxicZad pour la représenter au championnat Rocket League 'RLCS'. Le trio s'incline en demi-finale face à la team Club Unity."
+    description: "La HTKN choisit {flag-fr}Morpho28, {flag-fr}cloclo59120 et {flag-ch}ToxxicZad pour la représenter au premier championnat Rocket League 'RLCS'. Le trio s'incline en demi-finale face à la team Club Unity."
     category: "achievement"
     image: "rlcs.png"
   - date: "2016-10-18"

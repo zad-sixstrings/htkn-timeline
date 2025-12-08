@@ -1,20 +1,7 @@
 import { EVENT_ICONS } from "./utils/constants";
 import timelineMarker from "./assets/timeline-marker.png";
- 
-// Parse flags
-function parseFlags(text) {
-  return text.replace(/\{flag-([\w]{2})\}(\S+)/g, (match, code, name) => {
-    const countryCode = code.toLowerCase();
-    return `<span style="white-space: nowrap;"><img src="/flags/${countryCode}.svg" alt="${countryCode}" class="flag-icon" />${name}</span>`;
-  });
-}
-
-// Parse Markdown links
-function parseLinks(text) {
-  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
-  });
-}
+import Parser from "./Parser";
+import "./tooltips.css"
 
 // Display date based on original precision
 function formatDate(dateStr) {
@@ -36,9 +23,7 @@ function formatDate(dateStr) {
 
 export default function TimelineEvent({ event, isNew }) {
   return (
-    <div
-      className={`timeline-event-container ${isNew ? "fade-in" : ""}`}
-    >
+    <div className={`timeline-event-container ${isNew ? "fade-in" : ""}`}>
       <div className="timeline-event right">
         {event.category && EVENT_ICONS[event.category] && (
           <img
@@ -54,11 +39,7 @@ export default function TimelineEvent({ event, isNew }) {
           <h3>{event.title}</h3>
         </div>
         <div className="timeline-event-content">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: parseLinks(parseFlags(event.description)),
-            }}
-          ></p>
+          <Parser text={event.description} />
         </div>
         {event.image && (
           <div className="timeline-event-image">
