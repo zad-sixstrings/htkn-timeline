@@ -287,4 +287,8 @@ events:
     title: "Laissez passer la presse!"
     description: "La HTKN sort les pop-corns et assiste ensemble chaque année en party vocal à l'E3 2014."
     category: "team"
+  - date: "2021-04"
+    title: "À vous les studios"
+    description: "{flag-ch}ToxxicZad obtient le statut de Twitch Affiliaite sur sa chaîne. Des membres de la HTKN participeront à ses lives, notamment {flag-fr}Morpho28. Il mettra fin à son activité sur Twitch lors d'un dernier stream le 12 juillet 2023 après un total de 935 heures diffusées."
+    category: "team"
 ---
