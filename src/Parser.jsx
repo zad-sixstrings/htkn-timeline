@@ -53,8 +53,8 @@ function parseLinks(text) {
   });
 }
 
-// Individual tooltip trigger and bubble
-function TooltipTrigger({ id, content, active, onClick }) {
+// Individual tooltip trigger (no bubble - that's rendered separately)
+function TooltipTrigger({ id, active, onClick }) {
   return (
     <span className="inline-tooltip-wrapper">
       <button
@@ -64,7 +64,6 @@ function TooltipTrigger({ id, content, active, onClick }) {
       >
         ?
       </button>
-      {active && <span className="inline-tooltip-bubble">{content}</span>}
     </span>
   );
 }
@@ -75,6 +74,11 @@ export default function Parser({ text }) {
 
   // Parse the text for tooltips first, then apply other parsing to text parts
   const parts = parseInlineTooltips(text);
+  
+  // Get the content of the active tooltip
+  const activeTooltipContent = activeTooltip !== null 
+    ? parts.find(p => p.type === "tooltip" && p.id === activeTooltip)?.content 
+    : null;
 
   const handleTooltipClick = (id) => {
     setActiveTooltip(activeTooltip === id ? null : id);
@@ -86,6 +90,13 @@ export default function Parser({ text }) {
 
   return (
     <>
+      {/* Fixed position tooltip bubble - rendered once at container level */}
+      {activeTooltipContent && (
+        <div className="inline-tooltip-bubble">
+          {activeTooltipContent}
+        </div>
+      )}
+      
       <p>
         {parts.map((part, index) => {
           if (part.type === "tooltip") {
@@ -93,7 +104,6 @@ export default function Parser({ text }) {
               <TooltipTrigger
                 key={index}
                 id={part.id}
-                content={part.content}
                 active={activeTooltip === part.id}
                 onClick={handleTooltipClick}
               />
@@ -111,6 +121,7 @@ export default function Parser({ text }) {
           }
         })}
       </p>
+      
       {/* Backdrop to close tooltip when tapping outside */}
       {activeTooltip !== null && (
         <div className="inline-tooltip-backdrop" onClick={handleBackdropClick} />
