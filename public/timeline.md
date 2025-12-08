@@ -46,7 +46,7 @@ events:
     category: "gaming"
   - date: "2013-11-13"
     title: "Viser le sommet"
-    description: "Le crew GTA Online HTKN se hisse à la 1360ème place du classement mondial."
+    description: "Le crew GTA Online HTKN se hisse à la 1360ème place du classement mondial. {flag-fr}BaM-REPRESENTE89 rejoint la team."
     category: "achievement"
     image: "htkn-gtao.png"
   - date: "2013-11-28"
