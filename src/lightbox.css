@@ -1,0 +1,43 @@
+.lightbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.lightbox-backdrop p {
+  width: 100%;
+  text-align: right;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.65em;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: default;
+}
+
+.timeline-event-image {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.timeline-event-image:hover {
+  opacity: 0.8;
+}
