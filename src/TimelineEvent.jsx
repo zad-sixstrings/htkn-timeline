@@ -61,15 +61,22 @@ export default function TimelineEvent({ event, isNew }) {
             <Parser text={event.description} />
           </div>
           {event.image && (
-            <div
-              className="timeline-event-image"
-              onClick={() => setLightboxOpen(true)}
-            >
-              <img
-                src={`/images/${event.image}`}
-                alt={event.title}
-                className="event-image"
-              />
+            <div className="timeline-event-image-wrapper">
+              <div
+                className="timeline-event-image"
+                onClick={() => setLightboxOpen(true)}
+              >
+                <img
+                  src={`/images/${event.image}`}
+                  alt={event.title}
+                  className="event-image"
+                />
+                {event.caption && (
+                  <div className="image-caption">
+                    <p>{event.caption}</p>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
