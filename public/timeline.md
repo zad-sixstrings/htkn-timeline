@@ -82,7 +82,7 @@ events:
     description: "La HTKN sort son t-shirt arborant fièrement le logo."
     category: "team"
     image: "tshirt.png"
-    caption: "[HTKN]SwissReefer et [HTKN]ToxxicZad"
+    caption: "SwissReefer et ToxxicZad"
   - date: "2013-12-01"
     title: "Journalistes de terrain"
     description: "{flag-ch}ToxxicZad et {flag-fr}MORFO28 fondent G33kwave{?:Le site restera actif jusqu'en août 2015.}, un blog sur le thème du gaming qui propose actualités et tests. Ils y publieront aussi des interviews, dont celle de l'illustrateur Oskunk."
