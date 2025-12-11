@@ -22,7 +22,7 @@ events:
     category: "team"
   - date: "2012-07-21"
     title: "Descends d'mon bus"
-    description: "{flag-ch}MORFO28, {flag-ch}Toxxiczad, {flag-ch}SwissReefer, {flag-fr}storm-blast, {flag-fr}LUGRO28, {flag-ch}JULIO-28 et {flag-fr}ACY28 se lancent à la poursuite de l'Arche dans Borderlands 2. Ils y écumeront les moindres recoins, DLC compris."
+    description: "{flag-fr}MORFO28, {flag-ch}Toxxiczad, {flag-ch}SwissReefer, {flag-fr}storm-blast, {flag-fr}LUGRO28, {flag-fr}JULIO-28 et {flag-fr}ACY28 se lancent à la poursuite de l'Arche dans Borderlands 2. Ils y écumeront les moindres recoins, DLC compris."
     category: "gaming"
   - date: "2012-07-21"
     title: "Etalon du cul!"
