@@ -307,7 +307,7 @@ events:
     category: "achievement"
   - date: "2025-12-15"
     title: "Adieu, l'ami"
-    description: "Une partie de la HTKN parvient à se libérer pour se rassembler et rendre hommage à {flag-fr}MORFO28 lors de ses funérailles. {flag-fr}Vegalaeti, {flag-fr}LUGRO28, {flag-fr}JULIO-28, {flag-fr}ACY28, {flag-ch}SwissReefer, {flag-ch}ToxxicZad, {flag-fr}BaM-REPRESENTE89, {flag-fr}ultra13570, {flag-fr}Mr_Cakeii et {flag-fr}Dylou2894 se retrouvent à Chartres et assistent à la cérémonie. <br><br>Les larmes laissent place aux rires et au partage de souvenirs impérissables. {flag-fr}JULIO-28 accueille le groupe chez lui le temps d'un café, puis ils iront arpenter les rues de Chartres enemble avant de se dire au revoir."
+    description: "Une partie de la HTKN parvient à se libérer pour se rassembler et rendre hommage à {flag-fr}MORFO28 lors de ses funérailles. {flag-fr}Vegalaeti, {flag-fr}LUGRO28, {flag-fr}JULIO-28, {flag-fr}ACY28, {flag-ch}SwissReefer, {flag-ch}ToxxicZad, {flag-fr}BaM-REPRESENTE89, {flag-fr}ultra13570, {flag-fr}Mr_Cakeii et {flag-fr}Dylou2894 se retrouvent à Chartres et assistent à la cérémonie. <br><br>Les larmes laissent place aux rires et au partage de souvenirs impérissables. {flag-fr}JULIO-28 accueille le groupe chez lui le temps d'un café, puis ils iront arpenter les rues de Chartres ensemble avant de se dire au revoir."
     category: "team"
     image: "htknchezjulio.png"
   - date: "2025-12-16"
@@ -317,6 +317,6 @@ events:
     image: "htknpoteau.jpg"
   - date: "2025-12-17"
     title: "Et tu redeviendras poussière."
-    description: "Les quelques HTKN qui ont pu se libérer plusieurs jours se rassemblent pour assister à la dispersion des cendres de {flag-fr}MORFO28. Sous un soleil matinal aux lueurs dorées, {flag-fr}Vegalaeti, {flag-fr}ACY28, {flag-fr}JULIO-28, {flag-ch}ToxxicZad, {flag-ch}SwissReefer, {flag-fr}Dylou2894 et {flag-fr}BaM-REPRESENTE89 se receuillent et disent un dernier adieu à leur ami. Certains membres se rapprochent de la famille, racontant un peu l'histoire de la team. Après ce moment de partage et de recueillement, les membres présents se dispersent petit à petit."
+    description: "Les quelques HTKN qui ont pu se libérer plusieurs jours se rassemblent pour assister à la dispersion des cendres de {flag-fr}MORFO28. Sous un soleil matinal aux lueurs dorées, {flag-fr}Vegalaeti, {flag-fr}ACY28, {flag-fr}JULIO-28, {flag-ch}ToxxicZad, {flag-ch}SwissReefer, {flag-fr}Dylou2894 et {flag-fr}BaM-REPRESENTE89 se recueillent et disent un dernier adieu à leur ami. Certains membres se rapprochent de la famille, racontant un peu l'histoire de la team. Après ce moment de partage et de recueillement, les membres présents se dispersent petit à petit."
     category: "team"
 ---
